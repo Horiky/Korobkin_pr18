@@ -67,20 +67,21 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="pages\Main.xaml">
+    <Page Include="Pages\Main.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="pages\Ticket.xaml">
+    <Page Include="Pages\Ticket.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="pages\Main.xaml.cs">
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Pages\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pages\Ticket.xaml.cs">
+    <Compile Include="Pages\Ticket.xaml.cs">
       <DependentUpon>Ticket.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">

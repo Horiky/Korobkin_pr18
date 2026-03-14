@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Airlines_Миронченков.Pages
+namespace Airlines.Pages
 {
     /// <summary>
     /// Логика взаимодействия для Main.xaml

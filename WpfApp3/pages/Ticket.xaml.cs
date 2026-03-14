@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Airlines_Миронченков.Classes;
+using Airlines.Classes;
 
-namespace Airlines_Миронченков.Pages
+namespace Airlines.Pages
 {
     /// <summary>
     /// Логика взаимодействия для Ticket.xaml
