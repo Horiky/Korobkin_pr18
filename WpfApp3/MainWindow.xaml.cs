@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Airlines.Pages;
 
 namespace WpfApp3
 {
@@ -20,9 +22,22 @@ namespace WpfApp3
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow init;
         public MainWindow()
         {
             InitializeComponent();
+            init = this;
+            OpenPage(new Airlines.Pages.Main());
+
+        }
+        public void OpenPage(Page Page)
+        {
+            frame.Navigate(Page);
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new Main());
         }
     }
 }
