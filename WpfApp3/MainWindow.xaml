@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+                Title="Управление авиалиниями" Height="400" Width="700" MinHeight="400" MinWidth="700"
+>
+    <!-- Добавляем синий фон окна -->
+
+    <Viewbox Stretch="Uniform">
+        <Border Height="400" Width="700">
+
+            <Grid>
+                <Grid Height="60" VerticalAlignment="Top" Background="#FF0C73FE">
+                    <Image Width="50" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,5,5" Source="/Image/plane.png"/>
+                    <Label VerticalAlignment="Center" HorizontalAlignment="Left" Content="Управление авиалиниями" Foreground ="White" FontSize="16" Margin="122,0,0,0"/>
+                    <Button VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" Height="25" Content="Выйти" Margin="0,5,4,0" Click="Exit"/>
+                </Grid>
+                <Frame x:Name="frame" 
+                       NavigationUIVisibility="Hidden" 
+                       Margin="0,60,-0.4,0"/>
+            </Grid>
+
+        </Border>
+    </Viewbox>
 </Window>

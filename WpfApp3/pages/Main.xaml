@@ -1,0 +1,136 @@
+﻿<Page x:Class="Airlines_Миронченков.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Airlines_Миронченков.Pages"
+      mc:Ignorable="d" 
+      Title="Main"
+      Background="#FF0C73FE">
+
+    <Grid Background="#FF0C73FE">
+        <Viewbox Stretch="Uniform">
+            <Border Width="700" Height="450" Background="#FF0C73FE">
+
+                <Grid Background="#FF0C73FE">
+                    <Label Content="Поиск дешевых авиабилетов" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" 
+                           FontSize="16" 
+                           Foreground="White" 
+                           FontWeight="Bold" 
+                           Margin="247,50,0,0" 
+                           HorizontalContentAlignment="Center" 
+                           VerticalContentAlignment="Center"/>
+
+                    <Label Content="Лучший способ купить авиабилеты дешево" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" 
+                           Foreground="White" 
+                           Margin="247,20,0,0" 
+                           Width="255" 
+                           HorizontalContentAlignment="Center" 
+                           VerticalContentAlignment="Center"/>
+
+                    <!-- Город вылета -->
+                    <Label Content="Откуда:" 
+                           HorizontalAlignment="Center" 
+                           Foreground="White" 
+                           Margin="0,80,0,0" 
+                           Width="222" 
+                           VerticalAlignment="Top" 
+                           VerticalContentAlignment="Center"/>
+
+                    <TextBox x:Name="from" 
+                             Width="255" 
+                             Height="25" 
+                             HorizontalAlignment="Left" 
+                             VerticalAlignment="Top" 
+                             Margin="240,110,0,0" 
+                             HorizontalContentAlignment="Center" 
+                             VerticalContentAlignment="Center"/>
+
+                    <!-- Город назначения -->
+                    <Label Content="Куда:" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Top" 
+                           Foreground="White" 
+                           Width="222" 
+                           Margin="0,140,0,0" 
+                           VerticalContentAlignment="Center"/>
+
+                    <TextBox x:Name="to" 
+                             Width="254" 
+                             Height="25" 
+                             HorizontalAlignment="Left" 
+                             VerticalAlignment="Top" 
+                             Margin="240,170,0,0" 
+                             VerticalContentAlignment="Center"/>
+
+                    <!-- Дата вылета (Туда) -->
+                    <Label Content="Дата вылета (Туда):" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Top" 
+                           Foreground="White" 
+                           Width="222" 
+                           Margin="0,200,0,0" 
+                           VerticalContentAlignment="Center"/>
+
+                    <DatePicker x:Name="departureDate"
+                               Width="254"
+                               Height="25"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="240,230,0,0"
+                               SelectedDateChanged="DepartureDate_SelectedDateChanged"
+                               SelectedDateFormat="Short">
+                        <DatePicker.Resources>
+                            <Style TargetType="DatePickerTextBox">
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DatePicker.Resources>
+                    </DatePicker>
+
+                    <!-- Дата обратного вылета -->
+                    <Label Content="Дата вылета (Обратно):" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Top" 
+                           Foreground="White" 
+                           Width="222" 
+                           Margin="0,260,0,0" 
+                           VerticalContentAlignment="Center"/>
+
+                    <DatePicker x:Name="returnDate"
+                               Width="254"
+                               Height="25"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="240,290,0,0"
+                               SelectedDateFormat="Short">
+                        <DatePicker.Resources>
+                            <Style TargetType="DatePickerTextBox">
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DatePicker.Resources>
+                    </DatePicker>
+
+                    <!-- Кнопка поиска -->
+                    <Button x:Name="searchButton"
+                           VerticalAlignment="Top" 
+                           HorizontalAlignment="Left" 
+                           Width="100" 
+                           Height="25" 
+                           Content="Найти" 
+                           Margin="387,330,0,0" 
+                           Foreground="White" 
+                           Background="#FF4000" 
+                           BorderBrush="#FF4000" 
+                           Click="Search"/>
+                </Grid>
+
+            </Border>
+        </Viewbox>
+    </Grid>
+</Page>
